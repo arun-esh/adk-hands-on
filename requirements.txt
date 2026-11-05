@@ -1,0 +1,2 @@
+# The [a2a] extra adds the A2A SDK (for the agent-to-agent step).
+google-adk[a2a]==2.13.0
