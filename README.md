@@ -23,7 +23,8 @@ with `git diff <previous-branch>`.
 | Branch | What happens |
 |---|---|
 | `step00-setup` | Install and get your key |
-| `step01-create-agent` | You are here: create your first agent with `adk create` |
+| `step01-create-agent` | Create your first agent with `adk create` |
+| `step02-gatekeeper` | You are here: turn it into a gatekeeper that signs people in |
 
 > 🔔 *Opening bell: finish setup below before the talk. Conference wifi is slow!*
 
@@ -66,6 +67,15 @@ brackets as the default, so do not share your screen at this prompt.
 `adk create` writes a small agent: a model, a name, and an instruction. Ask it
 "What is the shelf price of Toblerone?" and notice it can only guess. It has never
 seen this store's shelves.
+
+## Step 2: the gatekeeper
+Nobody should reach the back office without signing in, so the agent becomes a **gatekeeper**: it
+welcomes you, asks for a username and password, and checks them with a `verify_user` tool.
+
+```bash
+adk web .       # pick store_ops_app, say hi, then sign in
+```
+👉 The demo logins and things to try are in [`store_ops_app/README.md`](store_ops_app/README.md).
 
 ## Troubleshooting
 - **API key error / 403:** check `.env` has no quotes or spaces around the key, and that you restarted `adk web` after editing it.
