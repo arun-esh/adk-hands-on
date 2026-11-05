@@ -22,7 +22,8 @@ with `git diff <previous-branch>`.
 
 | Branch | What happens |
 |---|---|
-| `step00-setup` | You are here: install and get your key |
+| `step00-setup` | Install and get your key |
+| `step01-create-agent` | You are here: create your first agent with `adk create` |
 
 > 🔔 *Opening bell: finish setup below before the talk. Conference wifi is slow!*
 
@@ -53,6 +54,18 @@ Never commit `.env` or share your key.
 adk --version
 ```
 You should see a version number.
+
+## Step 1: create your first agent
+```bash
+adk create store_ops_app      # pick backend 1 (Google AI), then accept the model
+adk web .                     # open the URL it prints and pick store_ops_app
+```
+`adk create` asks for your API key. If you already exported `GOOGLE_API_KEY`, it shows that key in
+brackets as the default, so do not share your screen at this prompt.
+
+`adk create` writes a small agent: a model, a name, and an instruction. Ask it
+"What is the shelf price of Toblerone?" and notice it can only guess. It has never
+seen this store's shelves.
 
 ## Troubleshooting
 - **API key error / 403:** check `.env` has no quotes or spaces around the key, and that you restarted `adk web` after editing it.
