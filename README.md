@@ -27,7 +27,8 @@ with `git diff <previous-branch>`.
 | `step02-gatekeeper` | Turn it into a gatekeeper that signs people in |
 | `step03-roles` | After login, each role gets its own agent with its own tools |
 | `step04-guards` | A `before_agent_callback` checks the role in code before a role agent runs |
-| `step05-parallel` | You are here: the owner's morning briefing, built by helpers that run at the same time |
+| `step05-parallel` | The owner's morning briefing, built by helpers that run at the same time |
+| `step06-schema` | You are here: helpers hand over validated reports (`output_schema`), so code can read them |
 
 > 🔔 *Opening bell: finish setup below before the talk. Conference wifi is slow!*
 
@@ -154,6 +155,29 @@ python -m tests.test_briefing
 ```
 
 Try it: sign in as `maya` and say `Give me the morning briefing`.
+
+## Step 6: hand-offs with a schema
+Step 5 passed sentences between agents. When code reads a sentence it has to guess, and it guessed wrong:
+the error text "Unable to retrieve total revenue for the last 7 days" became a false "$7" alert.
+
+Now each helper has an `output_schema` (`briefing/reports.py`), so what it saves in state is a validated dict:
+
+```python
+class RevenueReport(BaseModel):
+    status: Literal["ok", "error"]
+    total_cad: Optional[float] = None
+    note: Optional[str] = None
+```
+
+- `revenue_alert.py` now checks `report["status"] == "ok"` and reads `total_cad`. An error report can never look like revenue.
+- A helper that answers in free text fails validation instead of passing along silently.
+- The writer still reads the reports through `{stock_report}` etc. in its instruction.
+
+```bash
+python -m tests.test_briefing   # fake model: no network, no model calls
+```
+
+Not covered by that test: a real Gemini model filling these schemas while it also calls a tool (ADK adds a `set_model_response` tool for this). Try it live: sign in as `maya` and say `Give me the morning briefing`.
 
 ## Troubleshooting
 - **API key error / 403:** check `.env` has no quotes or spaces around the key, and that you restarted `adk web` after editing it.
