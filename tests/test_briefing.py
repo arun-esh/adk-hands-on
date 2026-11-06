@@ -96,7 +96,7 @@ async def run(agent, role):
 def test_owner_runs_in_parallel_and_state_flows():
     authors, last, took, state = asyncio.run(run(fake_pipeline(), "owner"))
     print(f"owner: {took:.2f}s, replies from {authors}")
-    assert took < 4 * 2 * DELAY * 0.7, f"not parallel: {took:.2f}s"   # serial would be >= 4 x 2 x DELAY
+    assert took < 4 * 2 * DELAY * 0.7, f"not parallel: {took:.2f}s"   # one after another this would take about 3 x 2 x DELAY + DELAY = 4.2 s
     assert authors[-1] == "briefing_writer"
     # The saved reports are validated dicts, not sentences.
     assert state["stock_report"] == STOCK, state.get("stock_report")
