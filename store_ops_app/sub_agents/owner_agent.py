@@ -1,6 +1,8 @@
 from google.adk.agents.llm_agent import Agent
+from google.adk.tools.agent_tool import AgentTool
 
 from ..guards import require_role
+from .briefing import briefing_agent
 from ..tools.manager_role_tools import get_sales_summary, get_top_sellers
 from ..tools.owner_role_tools import get_revenue
 from ..tools.staff_role_tools import get_low_stock, get_product_details
@@ -15,10 +17,12 @@ owner_agent = Agent(
         "You are a back-office assistant for the owner of Maple Lane Corner Market. "
         "You can look up products and stock levels, list items that are low on stock, "
         "report units sold and best sellers, and work out revenue. "
+        "If the owner asks for a morning or daily briefing, call the briefing_agent tool and share what it returns. "
         "You can only read information, never change anything. "
         "Always use your tools instead of guessing. All prices are in Canadian dollars ($)."
     ),
-    tools=[get_product_details, get_low_stock, get_sales_summary, get_top_sellers, get_revenue],
+    tools=[get_product_details, get_low_stock, get_sales_summary, get_top_sellers, get_revenue,
+           AgentTool(agent=briefing_agent)],
     before_agent_callback=require_role("owner"),
     disallow_transfer_to_peers=True,
 )

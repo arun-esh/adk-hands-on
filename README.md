@@ -26,7 +26,8 @@ with `git diff <previous-branch>`.
 | `step01-create-agent` | Create your first agent with `adk create` |
 | `step02-gatekeeper` | Turn it into a gatekeeper that signs people in |
 | `step03-roles` | After login, each role gets its own agent with its own tools |
-| `step04-guards` | You are here: a `before_agent_callback` checks the role in code before a role agent runs |
+| `step04-guards` | A `before_agent_callback` checks the role in code before a role agent runs |
+| `step05-parallel` | You are here: the owner's morning briefing, built by helpers that run at the same time |
 
 > 🔔 *Opening bell: finish setup below before the talk. Conference wifi is slow!*
 
@@ -124,6 +125,35 @@ python -m tests.test_guards
 ```
 
 Not covered by that test: a live chat in `adk web` (staff logs in, then asks for the owner agent).
+
+## Step 5: a morning briefing, built in parallel
+The owner can ask for a morning briefing. Three small helpers each do one job at the same time, then a
+writer turns their answers into one short note.
+
+```
+briefing_agent (Sequential, owner only)
+ ├─ gather_facts (Parallel)
+ │    ├─ stock_checker    -> state["stock_report"]
+ │    ├─ sales_checker    -> state["sales_report"]
+ │    └─ revenue_checker  -> state["revenue_report"]
+ └─ briefing_writer  reads the three reports from state
+```
+
+- `ParallelAgent` runs its helpers at the same time. Each saves its answer with `output_key`.
+- `SequentialAgent` fixes the order: gather first, then write. No model decides that order.
+- The writer's instruction uses `{stock_report}`, `{sales_report}` and `{revenue_report}`, which ADK fills from state.
+- The files live in `sub_agents/briefing/`: one file per helper, plus `briefing_agent.py` that builds the pipeline.
+- `owner_agent` calls the whole pipeline as a tool (`AgentTool`), so the owner stays in the conversation afterwards.
+- The pipeline has the owner guard from step 4, so only the owner can start it.
+- `revenue_alert.py` is code that reads the revenue helper's text and flags low revenue for the writer. Reading a number out of a sentence is fragile: if the revenue tool fails, the helper writes "Unable to retrieve total revenue for the last 7 days..." and the code finds the `7`, so the owner gets a false "revenue looks low ($7)" alert. `python -m tests.test_briefing` shows this as `KNOWN BREAK`. Step 6 fixes it with a schema.
+
+Check it without any model calls (a fake model proves the helpers overlap and the reports reach the writer):
+
+```bash
+python -m tests.test_briefing
+```
+
+Try it: sign in as `maya` and say `Give me the morning briefing`.
 
 ## Troubleshooting
 - **API key error / 403:** check `.env` has no quotes or spaces around the key, and that you restarted `adk web` after editing it.
