@@ -1,0 +1,114 @@
+{
+  "products": [
+    {
+      "sku": "0070221005160",
+      "name": "Toblerone",
+      "brand": "Toblerone",
+      "category": "Dairy",
+      "price": 5.04,
+      "stock": 26,
+      "reorder_level": 4,
+      "nutriscore": "e",
+      "low_stock": false
+    },
+    {
+      "sku": "06109224",
+      "name": "CARAMILK Salted Caramel",
+      "brand": "Cadbury",
+      "category": "Snacks",
+      "price": 4.81,
+      "stock": 14,
+      "reorder_level": 4,
+      "nutriscore": "e",
+      "low_stock": false
+    },
+    {
+      "sku": "0068700104107",
+      "name": "Dairyland 2% Ultrafiltered Chocolate Partly Skimmed Milk",
+      "brand": "Dairyland",
+      "category": "Drinks",
+      "price": 1.96,
+      "stock": 26,
+      "reorder_level": 4,
+      "nutriscore": "d",
+      "low_stock": false
+    },
+    {
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "brand": "Amadore",
+      "category": "Snacks",
+      "price": 2.89,
+      "stock": 18,
+      "reorder_level": 4,
+      "nutriscore": "e",
+      "low_stock": false
+    },
+    {
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "brand": "Biskwi",
+      "category": "Snacks",
+      "price": 1.76,
+      "stock": 0,
+      "reorder_level": 4,
+      "nutriscore": "e",
+      "low_stock": true
+    },
+    {
+      "sku": "0096619885718",
+      "name": "Unsalted mixed nuts",
+      "brand": "Kirkland Signature",
+      "category": "Snacks",
+      "price": 2.51,
+      "stock": 3,
+      "reorder_level": 4,
+      "nutriscore": "c",
+      "low_stock": true
+    },
+    {
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "brand": "Binggrae",
+      "category": "Snacks",
+      "price": 2.92,
+      "stock": 20,
+      "reorder_level": 20,
+      "nutriscore": "d",
+      "low_stock": true
+    },
+    {
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "brand": "President's choice",
+      "category": "Bakery",
+      "price": 2.01,
+      "stock": 106,
+      "reorder_level": 32,
+      "nutriscore": "a",
+      "low_stock": false
+    },
+    {
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "brand": "Endangered Species Chocolate",
+      "category": "Candy",
+      "price": 4.0,
+      "stock": 39,
+      "reorder_level": 12,
+      "nutriscore": "e",
+      "low_stock": false
+    },
+    {
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "brand": "Great Value • Walmart",
+      "category": "Drinks",
+      "price": 2.33,
+      "stock": 61,
+      "reorder_level": 20,
+      "nutriscore": "b",
+      "low_stock": false
+    }
+  ]
+}

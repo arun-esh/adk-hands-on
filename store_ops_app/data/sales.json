@@ -1,0 +1,1104 @@
+{
+  "as_of_date": "2026-11-04",
+  "note": "Real 30-day sales history for the 10 products. One row per product per day that it sold.",
+  "sales": [
+    {
+      "date": "2026-10-05",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 3
+    },
+    {
+      "date": "2026-10-05",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 6
+    },
+    {
+      "date": "2026-10-05",
+      "sku": "0068700104107",
+      "name": "Dairyland 2% Ultrafiltered Chocolate Partly Skimmed Milk",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-05",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 8
+    },
+    {
+      "date": "2026-10-05",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-05",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-05",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 5
+    },
+    {
+      "date": "2026-10-06",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 3
+    },
+    {
+      "date": "2026-10-06",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 6
+    },
+    {
+      "date": "2026-10-06",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 9
+    },
+    {
+      "date": "2026-10-06",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-06",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 3
+    },
+    {
+      "date": "2026-10-07",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 2
+    },
+    {
+      "date": "2026-10-07",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 11
+    },
+    {
+      "date": "2026-10-07",
+      "sku": "06109224",
+      "name": "CARAMILK Salted Caramel",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-07",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 8
+    },
+    {
+      "date": "2026-10-07",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-07",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-07",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 5
+    },
+    {
+      "date": "2026-10-08",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 3
+    },
+    {
+      "date": "2026-10-08",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 11
+    },
+    {
+      "date": "2026-10-08",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 6
+    },
+    {
+      "date": "2026-10-08",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 2
+    },
+    {
+      "date": "2026-10-08",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 2
+    },
+    {
+      "date": "2026-10-09",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 3
+    },
+    {
+      "date": "2026-10-09",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 8
+    },
+    {
+      "date": "2026-10-09",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 6
+    },
+    {
+      "date": "2026-10-09",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-09",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-09",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 8
+    },
+    {
+      "date": "2026-10-10",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 8
+    },
+    {
+      "date": "2026-10-10",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 3
+    },
+    {
+      "date": "2026-10-10",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-10",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-10",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 8
+    },
+    {
+      "date": "2026-10-11",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 3
+    },
+    {
+      "date": "2026-10-11",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 4
+    },
+    {
+      "date": "2026-10-11",
+      "sku": "0070221005160",
+      "name": "Toblerone",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-11",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 5
+    },
+    {
+      "date": "2026-10-11",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-11",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 4
+    },
+    {
+      "date": "2026-10-12",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 4
+    },
+    {
+      "date": "2026-10-12",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 10
+    },
+    {
+      "date": "2026-10-12",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 5
+    },
+    {
+      "date": "2026-10-12",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 2
+    },
+    {
+      "date": "2026-10-12",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-12",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 7
+    },
+    {
+      "date": "2026-10-13",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 2
+    },
+    {
+      "date": "2026-10-13",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 3
+    },
+    {
+      "date": "2026-10-13",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 8
+    },
+    {
+      "date": "2026-10-13",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-13",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 8
+    },
+    {
+      "date": "2026-10-14",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 4
+    },
+    {
+      "date": "2026-10-14",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 7
+    },
+    {
+      "date": "2026-10-14",
+      "sku": "0068700104107",
+      "name": "Dairyland 2% Ultrafiltered Chocolate Partly Skimmed Milk",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-14",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 6
+    },
+    {
+      "date": "2026-10-14",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 2
+    },
+    {
+      "date": "2026-10-14",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-14",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 10
+    },
+    {
+      "date": "2026-10-15",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 5
+    },
+    {
+      "date": "2026-10-15",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 5
+    },
+    {
+      "date": "2026-10-15",
+      "sku": "06109224",
+      "name": "CARAMILK Salted Caramel",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-15",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 2
+    },
+    {
+      "date": "2026-10-15",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-15",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 2
+    },
+    {
+      "date": "2026-10-15",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 4
+    },
+    {
+      "date": "2026-10-16",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 2
+    },
+    {
+      "date": "2026-10-16",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 7
+    },
+    {
+      "date": "2026-10-16",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 3
+    },
+    {
+      "date": "2026-10-16",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-16",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-16",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 3
+    },
+    {
+      "date": "2026-10-17",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-17",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 7
+    },
+    {
+      "date": "2026-10-17",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 7
+    },
+    {
+      "date": "2026-10-17",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-17",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 6
+    },
+    {
+      "date": "2026-10-18",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 2
+    },
+    {
+      "date": "2026-10-18",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 4
+    },
+    {
+      "date": "2026-10-18",
+      "sku": "0070221005160",
+      "name": "Toblerone",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-18",
+      "sku": "06109224",
+      "name": "CARAMILK Salted Caramel",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-18",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 4
+    },
+    {
+      "date": "2026-10-18",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-18",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-18",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 5
+    },
+    {
+      "date": "2026-10-19",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 2
+    },
+    {
+      "date": "2026-10-19",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 12
+    },
+    {
+      "date": "2026-10-19",
+      "sku": "0096619885718",
+      "name": "Unsalted mixed nuts",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-19",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 5
+    },
+    {
+      "date": "2026-10-19",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-19",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 5
+    },
+    {
+      "date": "2026-10-20",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 4
+    },
+    {
+      "date": "2026-10-20",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 9
+    },
+    {
+      "date": "2026-10-20",
+      "sku": "06109224",
+      "name": "CARAMILK Salted Caramel",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-20",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 5
+    },
+    {
+      "date": "2026-10-20",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-20",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-20",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 8
+    },
+    {
+      "date": "2026-10-21",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 2
+    },
+    {
+      "date": "2026-10-21",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 8
+    },
+    {
+      "date": "2026-10-21",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 2
+    },
+    {
+      "date": "2026-10-21",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-21",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 2
+    },
+    {
+      "date": "2026-10-21",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 4
+    },
+    {
+      "date": "2026-10-22",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-22",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 4
+    },
+    {
+      "date": "2026-10-22",
+      "sku": "0096619885718",
+      "name": "Unsalted mixed nuts",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-22",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 5
+    },
+    {
+      "date": "2026-10-22",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-22",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-22",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 5
+    },
+    {
+      "date": "2026-10-23",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 3
+    },
+    {
+      "date": "2026-10-23",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 2
+    },
+    {
+      "date": "2026-10-23",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 3
+    },
+    {
+      "date": "2026-10-23",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-23",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 4
+    },
+    {
+      "date": "2026-10-24",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-24",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 9
+    },
+    {
+      "date": "2026-10-24",
+      "sku": "0096619885718",
+      "name": "Unsalted mixed nuts",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-24",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 2
+    },
+    {
+      "date": "2026-10-24",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-24",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 7
+    },
+    {
+      "date": "2026-10-25",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 4
+    },
+    {
+      "date": "2026-10-25",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 6
+    },
+    {
+      "date": "2026-10-25",
+      "sku": "0070221005160",
+      "name": "Toblerone",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-25",
+      "sku": "0096619885718",
+      "name": "Unsalted mixed nuts",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-25",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 5
+    },
+    {
+      "date": "2026-10-25",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-25",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-25",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 7
+    },
+    {
+      "date": "2026-10-26",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 4
+    },
+    {
+      "date": "2026-10-26",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 6
+    },
+    {
+      "date": "2026-10-26",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 6
+    },
+    {
+      "date": "2026-10-26",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-26",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 6
+    },
+    {
+      "date": "2026-10-27",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 2
+    },
+    {
+      "date": "2026-10-27",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 6
+    },
+    {
+      "date": "2026-10-27",
+      "sku": "0070221005160",
+      "name": "Toblerone",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-27",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 3
+    },
+    {
+      "date": "2026-10-27",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-27",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-27",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 3
+    },
+    {
+      "date": "2026-10-28",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 4
+    },
+    {
+      "date": "2026-10-28",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 7
+    },
+    {
+      "date": "2026-10-28",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 8
+    },
+    {
+      "date": "2026-10-28",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-28",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 3
+    },
+    {
+      "date": "2026-10-29",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 2
+    },
+    {
+      "date": "2026-10-29",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 12
+    },
+    {
+      "date": "2026-10-29",
+      "sku": "0068700104107",
+      "name": "Dairyland 2% Ultrafiltered Chocolate Partly Skimmed Milk",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-29",
+      "sku": "0070221005160",
+      "name": "Toblerone",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-29",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 8
+    },
+    {
+      "date": "2026-10-29",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 2
+    },
+    {
+      "date": "2026-10-29",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-29",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 8
+    },
+    {
+      "date": "2026-10-30",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 3
+    },
+    {
+      "date": "2026-10-30",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 11
+    },
+    {
+      "date": "2026-10-30",
+      "sku": "0068700104107",
+      "name": "Dairyland 2% Ultrafiltered Chocolate Partly Skimmed Milk",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-30",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 6
+    },
+    {
+      "date": "2026-10-30",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 3
+    },
+    {
+      "date": "2026-10-31",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 2
+    },
+    {
+      "date": "2026-10-31",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 8
+    },
+    {
+      "date": "2026-10-31",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 4
+    },
+    {
+      "date": "2026-10-31",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-31",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-10-31",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 6
+    },
+    {
+      "date": "2026-11-01",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 3
+    },
+    {
+      "date": "2026-11-01",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 7
+    },
+    {
+      "date": "2026-11-01",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 6
+    },
+    {
+      "date": "2026-11-01",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 2
+    },
+    {
+      "date": "2026-11-01",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-11-01",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 4
+    },
+    {
+      "date": "2026-11-02",
+      "sku": "0037014000139",
+      "name": "Dark Chocolate With Sea Salt And Almonds (Owl)",
+      "units_sold": 3
+    },
+    {
+      "date": "2026-11-02",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 12
+    },
+    {
+      "date": "2026-11-02",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 5
+    },
+    {
+      "date": "2026-11-02",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-11-02",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-11-02",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 3
+    },
+    {
+      "date": "2026-11-03",
+      "sku": "0060383186630",
+      "name": "Apple cinnamon oatmeal cereal baby",
+      "units_sold": 10
+    },
+    {
+      "date": "2026-11-03",
+      "sku": "0627735258454",
+      "name": "Unsweet. Vanilla Almond Bev. Shelf-stable.",
+      "units_sold": 6
+    },
+    {
+      "date": "2026-11-03",
+      "sku": "0667888056033",
+      "name": "Golden Ring",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-11-03",
+      "sku": "0667888093472",
+      "name": "Milkyroll",
+      "units_sold": 1
+    },
+    {
+      "date": "2026-11-03",
+      "sku": "8801104946360",
+      "name": "Purple yam(ube) ice bar",
+      "units_sold": 4
+    }
+  ]
+}

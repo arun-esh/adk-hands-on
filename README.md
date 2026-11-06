@@ -24,7 +24,8 @@ with `git diff <previous-branch>`.
 |---|---|
 | `step00-setup` | Install and get your key |
 | `step01-create-agent` | Create your first agent with `adk create` |
-| `step02-gatekeeper` | You are here: turn it into a gatekeeper that signs people in |
+| `step02-gatekeeper` | Turn it into a gatekeeper that signs people in |
+| `step03-roles` | You are here: after login, each role gets its own agent with its own tools |
 
 > 🔔 *Opening bell: finish setup below before the talk. Conference wifi is slow!*
 
@@ -76,6 +77,30 @@ welcomes you, asks for a username and password, and checks them with a `verify_u
 adk web .       # pick store_ops_app, say hi, then sign in
 ```
 👉 The demo logins and things to try are in [`store_ops_app/README.md`](store_ops_app/README.md).
+
+## Step 3: one agent per role
+After sign-in the gatekeeper hands you to the agent for your role. Each agent only has the tools
+that role may use, so a staff member cannot see sales because their agent has no sales tool.
+
+| Role | Agent | Tools | Files |
+|---|---|---|---|
+| staff | `staff_agent` | `get_product_details`, `get_low_stock` | `sub_agents/staff_agent.py`, `tools/staff_role_tools.py` |
+| manager | `manager_agent` | the staff tools + `get_sales_summary`, `get_top_sellers` | `sub_agents/manager_agent.py`, `tools/manager_role_tools.py` |
+| owner | `owner_agent` | the manager tools + `get_revenue` | `sub_agents/owner_agent.py`, `tools/owner_role_tools.py` |
+
+`agent.py` still holds the gatekeeper. It lists the three role agents with `sub_agents=[...]`.
+
+The data is plain JSON in `store_ops_app/data/`: `products.json` (10 products) and `sales.json`
+(30 days of sales). Everything is read-only.
+
+```bash
+adk web .       # pick store_ops_app, say hi, sign in (logins are in store_ops_app/README.md), then try:
+```
+- staff (`sam`): `What is the price of Toblerone?`, `Which items are low on stock?`, then `What sold best last week?` (refused)
+- manager (`daniel`): `Top 3 sellers over the last 30 days?`, then `How much revenue did we make?` (refused)
+- owner (`maya`): `How much revenue did we make in the last 30 days?`
+
+Each role agent is set with `disallow_transfer_to_peers=True`, so one role cannot hand you sideways to another.
 
 ## Troubleshooting
 - **API key error / 403:** check `.env` has no quotes or spaces around the key, and that you restarted `adk web` after editing it.
