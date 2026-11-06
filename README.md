@@ -29,7 +29,8 @@ with `git diff <previous-branch>`.
 | `step04-guards` | A `before_agent_callback` checks the role in code before a role agent runs |
 | `step05-parallel` | The owner's morning briefing, built by helpers that run at the same time |
 | `step06-schema` | Helpers hand over validated reports (`output_schema`), so code can read them |
-| `step07-critic` | You are here: a writer and a critic loop until the reorder message is right |
+| `step07-critic` | A writer and a critic loop until the reorder message is right |
+| `step08-a2a` | You are here: the order goes to a separate supplier agent over A2A |
 
 > 🔔 *Opening bell: finish setup below before the talk. Conference wifi is slow!*
 
@@ -203,6 +204,34 @@ python -m tests.test_reorder   # scripted fake models: no network, no model call
 
 Not covered by that test: how a real model behaves as writer and critic (does it fix the draft, does it ever approve too early?).
 Try it live: sign in as `maya` and say `Draft a reorder message for the supplier`.
+
+## Step 8: a supplier agent in another service (A2A)
+The supplier is another company, so its agent runs as its own service. Our store agent only knows its address.
+
+```
+store_ops_app (owner_agent)  ── A2A over HTTP ──>  supplier_service (supplier_agent + its own catalogue)
+```
+
+- `supplier_service/` is a separate app: its own agent, its own tool (`check_availability`) and its own data. `a2a_app.py` serves it with `to_a2a(...)`.
+- `store_ops_app/sub_agents/supplier_agent.py` is a `RemoteA2aAgent`: just a name and the URL of the supplier's agent card.
+- `owner_agent` calls it as a tool: `AgentTool(agent=supplier_agent)`.
+- Session state does not cross the boundary. Only the message goes over, so the supplier never sees the user's role or name.
+  That is also why the guard in step 4 stays on our side: the supplier cannot enforce our roles.
+
+Run the supplier in a second terminal, then use `adk web .` as before:
+
+```bash
+uvicorn supplier_service.a2a_app:a2a_app --port 8001
+```
+
+Try it: sign in as `maya` and say `Draft a reorder message for the supplier, then send it to the supplier`.
+Golden Ring is backordered on purpose, so the supplier reply should say so.
+
+```bash
+python -m tests.test_a2a   # starts the supplier on localhost with a fake model: no model calls
+```
+
+Not covered by that test: how a real model uses the supplier's answer. Set `SUPPLIER_URL` if the supplier runs elsewhere.
 
 ## Troubleshooting
 - **API key error / 403:** check `.env` has no quotes or spaces around the key, and that you restarted `adk web` after editing it.
