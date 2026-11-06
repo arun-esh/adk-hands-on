@@ -114,6 +114,9 @@ be talked into the wrong choice, so now plain code checks it too.
 
 The model never writes `user_role`, so no message can change it.
 
+A refused user is handed back to the gatekeeper. Without that, ADK keeps the conversation with the
+agent that spoke last, so the user would stay stuck behind the refusal.
+
 Check it without any model calls:
 
 ```bash

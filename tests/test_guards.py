@@ -37,11 +37,12 @@ async def ask(agent, role):
         app_name="guard_test", user_id="u", state=state
     )
     msg = types.Content(role="user", parts=[types.Part(text="show me revenue")])
-    texts = []
+    # Stop at the first reply. After a refusal ADK moves on to the gatekeeper,
+    # which would call a model, and this test must not do that.
     async for event in runner.run_async(user_id="u", session_id=session.id, new_message=msg):
         if event.content and event.content.parts:
-            texts += [p.text for p in event.content.parts if p.text]
-    return texts
+            return [p.text for p in event.content.parts if p.text], event.actions.transfer_to_agent
+    return [], None
 
 
 def test_blocked_paths():
@@ -51,8 +52,9 @@ def test_blocked_paths():
         (staff_agent, "manager"), (staff_agent, "owner"), (staff_agent, None),
     ]
     for agent, role in cases:
-        out = asyncio.run(ask(agent, role))
+        out, handback = asyncio.run(ask(agent, role))
         assert out == ["Sorry, that isn't available for your role."], (agent.name, role, out)
+        assert handback == "gatekeeper", (agent.name, role, handback)
         print(f"blocked  {agent.name:14} role={role}")
 
 

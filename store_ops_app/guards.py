@@ -13,6 +13,11 @@ def require_role(*allowed_roles):
         if role in allowed_roles:
             return None  # allowed: let the agent run as normal
 
+        # Hand the next turn back to the gatekeeper. Without this, ADK keeps the
+        # conversation with the agent that spoke last, so the user would stay
+        # stuck behind this refusal.
+        callback_context.actions.transfer_to_agent = "gatekeeper"
+
         # Returning content skips the agent and sends this text back instead.
         return types.Content(
             role="model",
