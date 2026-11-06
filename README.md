@@ -30,7 +30,8 @@ with `git diff <previous-branch>`.
 | `step05-parallel` | The owner's morning briefing, built by helpers that run at the same time |
 | `step06-schema` | Helpers hand over validated reports (`output_schema`), so code can read them |
 | `step07-critic` | A writer and a critic loop until the reorder message is right |
-| `step08-a2a` | You are here: the order goes to a separate supplier agent over A2A |
+| `step08-a2a` | The order goes to a separate supplier agent over A2A |
+| `step09-observe` | You are here: a trace of every run, and evals that check the right tools get called |
 
 > 🔔 *Opening bell: finish setup below before the talk. Conference wifi is slow!*
 
@@ -232,6 +233,36 @@ python -m tests.test_a2a   # starts the supplier on localhost with a fake model:
 ```
 
 Not covered by that test: how a real model uses the supplier's answer. Set `SUPPLIER_URL` if the supplier runs elsewhere.
+
+## Step 9: see what happened, and check it
+With many agents, "what did it do?" is the hard question. Two small answers.
+
+**Tracing.** `store_ops_app/trace.py` is a plugin that writes one JSON line per step to `traces/trace.jsonl`:
+agent start and end, tool call, tool result. `agent.py` wraps the gatekeeper in an `App` with the plugin attached.
+
+```json
+{"event": "agent_start", "agent": "stock_checker", "role": "owner", "t": 1793942291.273}
+{"event": "tool_call", "agent": "stock_checker", "tool": "get_low_stock", "arg_names": [], "t": 1793942291.934}
+```
+
+- Start times of the three briefing helpers sit within 0.05s of each other: that is the parallel fan-out, visible in the trace.
+- Tool arguments are recorded by name only. `verify_user` receives a password, and a trace file must not become a place where secrets end up.
+- `adk web` also has its own Trace tab (ADK emits OpenTelemetry spans); the plugin is the version you can read in a text file.
+
+**Evals.** `evals/store_ops.evalset.json` holds two login-then-ask conversations, and `evals/test_config.json` says the tool calls must match in order.
+
+```bash
+adk eval store_ops_app evals/store_ops.evalset.json --config_file_path evals/test_config.json
+```
+
+- ADK's tool-trajectory check is positive only ("these tools were called"). It cannot say "get_revenue was never called".
+  Negative checks, like staff never reaching revenue, are plain code: see `tests/test_guards.py`.
+- `adk eval` calls the model, so it was **not run** here. `python -m tests.test_evalset` only checks the files are valid.
+
+```bash
+python -m tests.test_trace      # fake model: shows the parallel start times, no secrets in the trace
+python -m tests.test_evalset    # the eval files are valid
+```
 
 ## Troubleshooting
 - **API key error / 403:** check `.env` has no quotes or spaces around the key, and that you restarted `adk web` after editing it.

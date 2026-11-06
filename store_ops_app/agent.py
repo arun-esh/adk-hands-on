@@ -1,9 +1,11 @@
 from google.adk.agents.llm_agent import Agent
+from google.adk.apps import App
 
 from .sub_agents.manager_agent import manager_agent
 from .sub_agents.owner_agent import owner_agent
 from .sub_agents.staff_agent import staff_agent
 from .tools.gatekeeper_tools import verify_user
+from .trace import TraceLog
 
 root_agent = Agent(
     model='gemini-3.8-flash',
@@ -28,3 +30,6 @@ root_agent = Agent(
     tools=[verify_user],
     sub_agents=[staff_agent, manager_agent, owner_agent],
 )
+
+# The app wraps the gatekeeper and adds the trace plugin, so every run leaves a trace.
+app = App(name='store_ops_app', root_agent=root_agent, plugins=[TraceLog()])

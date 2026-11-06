@@ -1,0 +1,208 @@
+{
+  "eval_set_id": "store_ops",
+  "name": "Store ops: login and role tools",
+  "description": "Positive checks: the right tools get called after a login. Run with: adk eval store_ops_app evals/store_ops.evalset.json --config_file_path evals/test_config.json",
+  "eval_cases": [
+    {
+      "eval_id": "owner_asks_revenue",
+      "conversation": [
+        {
+          "invocation_id": "",
+          "user_content": {
+            "parts": [
+              {
+                "text": "hello"
+              }
+            ],
+            "role": "user"
+          },
+          "intermediate_data": {
+            "tool_uses": [],
+            "tool_responses": [],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 0.0
+        },
+        {
+          "invocation_id": "",
+          "user_content": {
+            "parts": [
+              {
+                "text": "maya"
+              }
+            ],
+            "role": "user"
+          },
+          "intermediate_data": {
+            "tool_uses": [],
+            "tool_responses": [],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 0.0
+        },
+        {
+          "invocation_id": "",
+          "user_content": {
+            "parts": [
+              {
+                "text": "owner123"
+              }
+            ],
+            "role": "user"
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "args": {
+                  "username": "maya",
+                  "password": "owner123"
+                },
+                "name": "verify_user"
+              },
+              {
+                "args": {
+                  "agent_name": "owner_agent"
+                },
+                "name": "transfer_to_agent"
+              }
+            ],
+            "tool_responses": [],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 0.0
+        },
+        {
+          "invocation_id": "",
+          "user_content": {
+            "parts": [
+              {
+                "text": "How much revenue did we make in the last 30 days?"
+              }
+            ],
+            "role": "user"
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "args": {
+                  "days": 30
+                },
+                "name": "get_revenue"
+              }
+            ],
+            "tool_responses": [],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 0.0
+        }
+      ],
+      "session_input": {
+        "app_name": "store_ops_app",
+        "user_id": "eval_user",
+        "state": {}
+      },
+      "creation_timestamp": 0.0,
+      "final_session_state": {}
+    },
+    {
+      "eval_id": "staff_asks_low_stock",
+      "conversation": [
+        {
+          "invocation_id": "",
+          "user_content": {
+            "parts": [
+              {
+                "text": "hello"
+              }
+            ],
+            "role": "user"
+          },
+          "intermediate_data": {
+            "tool_uses": [],
+            "tool_responses": [],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 0.0
+        },
+        {
+          "invocation_id": "",
+          "user_content": {
+            "parts": [
+              {
+                "text": "sam"
+              }
+            ],
+            "role": "user"
+          },
+          "intermediate_data": {
+            "tool_uses": [],
+            "tool_responses": [],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 0.0
+        },
+        {
+          "invocation_id": "",
+          "user_content": {
+            "parts": [
+              {
+                "text": "staff123"
+              }
+            ],
+            "role": "user"
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "args": {
+                  "username": "sam",
+                  "password": "staff123"
+                },
+                "name": "verify_user"
+              },
+              {
+                "args": {
+                  "agent_name": "staff_agent"
+                },
+                "name": "transfer_to_agent"
+              }
+            ],
+            "tool_responses": [],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 0.0
+        },
+        {
+          "invocation_id": "",
+          "user_content": {
+            "parts": [
+              {
+                "text": "Which items are low on stock?"
+              }
+            ],
+            "role": "user"
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "args": {},
+                "name": "get_low_stock"
+              }
+            ],
+            "tool_responses": [],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 0.0
+        }
+      ],
+      "session_input": {
+        "app_name": "store_ops_app",
+        "user_id": "eval_user",
+        "state": {}
+      },
+      "creation_timestamp": 0.0,
+      "final_session_state": {}
+    }
+  ],
+  "creation_timestamp": 0.0
+}
