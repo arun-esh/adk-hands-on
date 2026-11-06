@@ -1,6 +1,8 @@
 import logging
 from typing import Any, Dict
 
+from google.adk.tools import ToolContext
+
 logger = logging.getLogger(__name__)
 
 # Mock database of registered users. Demo data only: the passwords are fake
@@ -14,13 +16,14 @@ db = {
 }
 
 
-def verify_user(username: str, password: str) -> Dict[str, Any]:
+def verify_user(username: str, password: str, tool_context: ToolContext) -> Dict[str, Any]:
     """
     Checks a username and password against the list of registered users.
 
     Args:
         username: The username the person typed (e.g., 'maya').
         password: The password the person typed.
+        tool_context: Supplied by ADK (not by the model); used to remember who signed in.
 
     Returns:
         A dictionary with a status ('success', 'denied', 'inactive' or 'error'),
@@ -45,6 +48,10 @@ def verify_user(username: str, password: str) -> Dict[str, Any]:
                 "verified": False,
                 "message": "This account is switched off.",
             }
+
+        # Written by this code, not by the model. The role guards read it later.
+        tool_context.state["user_role"] = user["role"]
+        tool_context.state["user_name"] = user["first_name"]
 
         return {
             "status": "success",

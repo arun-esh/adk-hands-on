@@ -1,9 +1,11 @@
 from google.adk.agents.llm_agent import Agent
 
+from ..guards import require_role
 from ..tools.manager_role_tools import get_sales_summary, get_top_sellers
 from ..tools.owner_role_tools import get_revenue
 from ..tools.staff_role_tools import get_low_stock, get_product_details
 
+# before_agent_callback checks the signed-in role in code before this agent runs.
 # disallow_transfer_to_peers stops this agent from handing someone sideways to another role.
 owner_agent = Agent(
     model='gemini-3.8-flash',
@@ -17,5 +19,6 @@ owner_agent = Agent(
         "Always use your tools instead of guessing. All prices are in Canadian dollars ($)."
     ),
     tools=[get_product_details, get_low_stock, get_sales_summary, get_top_sellers, get_revenue],
+    before_agent_callback=require_role("owner"),
     disallow_transfer_to_peers=True,
 )

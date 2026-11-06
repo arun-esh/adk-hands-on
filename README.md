@@ -25,7 +25,8 @@ with `git diff <previous-branch>`.
 | `step00-setup` | Install and get your key |
 | `step01-create-agent` | Create your first agent with `adk create` |
 | `step02-gatekeeper` | Turn it into a gatekeeper that signs people in |
-| `step03-roles` | You are here: after login, each role gets its own agent with its own tools |
+| `step03-roles` | After login, each role gets its own agent with its own tools |
+| `step04-guards` | You are here: a `before_agent_callback` checks the role in code before a role agent runs |
 
 > 🔔 *Opening bell: finish setup below before the talk. Conference wifi is slow!*
 
@@ -101,6 +102,25 @@ adk web .       # pick store_ops_app, say hi, sign in (logins are in store_ops_a
 - owner (`maya`): `How much revenue did we make in the last 30 days?`
 
 Each role agent is set with `disallow_transfer_to_peers=True`, so one role cannot hand you sideways to another.
+
+## Step 4: guard the doors with `before_agent_callback`
+Up to step 3, the hand-off from the gatekeeper to a role agent was the model's decision. A model can
+be talked into the wrong choice, so now plain code checks it too.
+
+1. `verify_user` writes `user_role` and `user_name` into session state (it only does this on a correct login).
+2. `guards.py` has `require_role("owner")`: a `before_agent_callback` that reads the role from state.
+3. Each role agent has its own guard. If the role does not match, the agent never runs and the user
+   gets "Sorry, that isn't available for your role."
+
+The model never writes `user_role`, so no message can change it.
+
+Check it without any model calls:
+
+```bash
+python -m tests.test_guards
+```
+
+Not covered by that test: a live chat in `adk web` (staff logs in, then asks for the owner agent).
 
 ## Troubleshooting
 - **API key error / 403:** check `.env` has no quotes or spaces around the key, and that you restarted `adk web` after editing it.
