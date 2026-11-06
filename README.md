@@ -28,7 +28,8 @@ with `git diff <previous-branch>`.
 | `step03-roles` | After login, each role gets its own agent with its own tools |
 | `step04-guards` | A `before_agent_callback` checks the role in code before a role agent runs |
 | `step05-parallel` | The owner's morning briefing, built by helpers that run at the same time |
-| `step06-schema` | You are here: helpers hand over validated reports (`output_schema`), so code can read them |
+| `step06-schema` | Helpers hand over validated reports (`output_schema`), so code can read them |
+| `step07-critic` | You are here: a writer and a critic loop until the reorder message is right |
 
 > 🔔 *Opening bell: finish setup below before the talk. Conference wifi is slow!*
 
@@ -178,6 +179,30 @@ python -m tests.test_briefing   # fake model: no network, no model calls
 ```
 
 Not covered by that test: a real Gemini model filling these schemas while it also calls a tool (ADK adds a `set_model_response` tool for this). Try it live: sign in as `maya` and say `Give me the morning briefing`.
+
+## Step 7: a writer and a critic
+The owner can ask for a reorder message to the supplier. A writer drafts it, a critic reviews it, and they
+loop until the critic is happy or 3 rounds have passed.
+
+```
+reorder_agent (LoopAgent, owner only, max 3 rounds)
+ ├─ reorder_writer   drafts the message        -> state["reorder_draft"]
+ └─ reorder_critic   reviews it                -> state["critique"], or calls exit_loop
+```
+
+- The writer's instruction ends with `{critique?}`: the `?` means "empty on the first round".
+- The review is split in two. The exact part (does the draft name every low-stock item?) is plain code in a tool,
+  `check_reorder_items`. The fuzzy part (is it polite, is anything made up?) is the critic model's judgement.
+- The critic stops the loop by calling `exit_loop`. `max_iterations=3` is the safety net.
+- When the loop ends, plain code (`publish_draft`) returns the last draft, so no extra model call is needed.
+- `owner_agent` calls the loop as a tool, and the owner guard from step 4 covers it.
+
+```bash
+python -m tests.test_reorder   # scripted fake models: no network, no model calls
+```
+
+Not covered by that test: how a real model behaves as writer and critic (does it fix the draft, does it ever approve too early?).
+Try it live: sign in as `maya` and say `Draft a reorder message for the supplier`.
 
 ## Troubleshooting
 - **API key error / 403:** check `.env` has no quotes or spaces around the key, and that you restarted `adk web` after editing it.
